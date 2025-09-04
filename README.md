@@ -53,6 +53,112 @@ cd <repo-name>
 Install PHP dependencies:
 composer install
 
+-----
+
+### 1\. Setup
+
+This section guides users on how to get the Laravel backend running locally.
+
+#### **Prerequisites**
+
+Make sure you have the following installed:
+
+  * **PHP**: Laravel requires a recent version of PHP.
+  * **Composer**: The dependency manager for PHP.
+  * **Node.js & npm/yarn**: Required for frontend asset compilation (e.g., using Laravel Mix or Vite).
+  * **Database**: A database like MySQL, PostgreSQL, or SQLite.
+
+#### **Getting Started**
+
+1.  **Clone the repository**:
+
+    ```bash
+    git clone https://github.com/your-username/your-laravel-repo.git
+    cd your-laravel-repo
+    ```
+
+2.  **Install PHP dependencies**:
+
+    ```bash
+    composer install
+    ```
+
+3.  **Install JavaScript dependencies**:
+
+    ```bash
+    npm install
+    # or
+    yarn install
+    ```
+
+4.  **Create and configure the environment file**: Copy the `.env.example` file to create your `.env` file and generate the application key.
+
+    ```bash
+    cp .env.example .env
+    php artisan key:generate
+    ```
+
+5.  **Configure the database**: Open the `.env` file and update the database connection details.
+
+    ```bash
+    DB_CONNECTION=mysql
+    DB_HOST=127.0.0.1
+    DB_PORT=3306
+    DB_DATABASE=your_db_name
+    DB_USERNAME=your_db_user
+    DB_PASSWORD=your_db_password
+    ```
+
+6.  **Run migrations**: This creates the necessary database tables.
+
+    ```bash
+    php artisan migrate
+    ```
+
+-----
+
+### 2\. Running the Application
+
+This section explains how to run the Laravel development server and compile assets.
+
+#### **Development Server** 🏃‍♂️
+
+Start the local development server:
+
+```bash
+php artisan serve
+```
+
+The application will be available at `http://localhost:8000`.
+
+#### **Asset Compilation**
+
+To compile frontend assets (if your project has a frontend or uses Laravel Mix/Vite):
+
+```bash
+# To compile assets once
+npm run dev
+
+# To watch for file changes during development
+npm run watch
+```
+
+-----
+
+### 3\. Deployment
+
+This section provides instructions for deploying the Laravel application to a production server.
+
+1.  **Server Setup**: Ensure your server has all the prerequisites.
+2.  **Database Configuration**: Set up a production database and update the `.env` file on the server.
+3.  **Run Migrations**: On the production server, run `php artisan migrate --force`.
+4.  **Optimizations**: Run these commands to optimize the application for production.
+    ```bash
+    php artisan config:cache
+    php artisan route:cache
+    php artisan view:cache
+    ```
+5.  **Serve the Application**: Configure your web server (e.g., Nginx or Apache) to serve the `public/index.php` file.
 
 ### Premium Partners
 
