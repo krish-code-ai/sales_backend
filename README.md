@@ -33,6 +33,27 @@ If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Lar
 
 We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
 
+## Requirements
+- PHP 8.x
+- Composer
+- MySQL or MariaDB
+- Laravel 10.x
+- Node.js (if using Laravel Mix for frontend assets)
+
+---
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone https://github.com/<your-username>/<repo-name>.git
+cd <repo-name>
+
+Install PHP dependencies:
+composer install
+
+
 ### Premium Partners
 
 - **[Vehikl](https://vehikl.com)**
